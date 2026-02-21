@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI — Голосове управління ПК з телефону</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<canvas id="matrix"></canvas>
+<script src="matrix.js"></script>
+<body>
+    <div class="holo-bg"></div>
+    <div class="holo-bg holo-bg--2"></div>
+    <div class="grid-overlay"></div>
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <span class="logo-text">JARVIS</span>
+            <span class="logo-sub">AI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link" data-section="about">Про Джарвіса</a></li>
+            <li><a href="#how" class="nav-link" data-section="how">Як працює</a></li>
+            <li><a href="#commands" class="nav-link" data-section="commands">Голосові команди</a></li>
+            <li><a href="#security" class="nav-link" data-section="security">Безпека</a></li>
+            <li><a href="#connect" class="nav-link" data-section="connect">Підключення</a></li>
+            <li><a href="#help" class="nav-link" data-section="help">Підтримка</a></li>
+            <section id="share" class="sharing">
+            <div class="container">
+                <h2 class="section-title">Поділіться <span class="neon-text">Джарвісом</span></h2>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn facebook">Facebook </a>
+                    <a href="#" class="share-btn twitter">Twitter </a>
+                    <a href="#" class="share-btn telegram">Telegram </a>
+                    <a href="#" class="share-btn reddit">Reddit </a>
+                    <a href="#" class="share-btn instagram">Instagram </a>
+                    <a href="#" class="share-btn email">Email </a>
+                    <a href="#" class="share-btn discord">Discord</a>
+                </div>
+            </div>
+        </section>
+        </ul>
+        <button class="mobile-toggle" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <header class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="JARVIS">JARVIS</span>
+                    <span class="hero-subtitle">Голосовий ШІ-асистент майбутнього</span>
+                </h1>
+                <p class="hero-desc">Керуйте комп’ютером голосом з телефону. Один розумний міст між мобільним і ПК</p>
+                <a href="#connect" class="cta-btn neon-btn">Підключити зараз</a>
+            </div>
+            <div class="hero-visual">
+                <div class="device-phone">
+                    <div class="phone-screen">
+                        <div class="mic-wave"></div>
+                        <div class="mic-wave"></div>
+                        <div class="mic-wave"></div>
+                        <p class="voice-text">&laquo;Запусти браузер&raquo;</p>
+                    </div>
+                </div>
+                <div class="connection-line"></div>
+                <div class="device-pc">
+                    <div class="pc-screen">
+                        <div class="browser-window">
+                            <div class="browser-bar"></div>
+                            <div class="browser-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="sections">
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Про <span class="neon-text">Джарвіса</span></h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>JARVIS — це інтелектуальна система, що об’єднує ваш смартфон і комп’ютер у єдину екосистему голосового управління. Ви говорите — Джарвіс виконує. Без клавіатури, без миші.</p>
+                        <ul class="features">
+                            <li>Миттєве (Поки з затримкою), але виконання команд через захищене з’єднання</li>
+                            <li>Підтримка природної української мови</li>
+                            <li>Інтеграція з Windows, macOS, Linux</li>
+                            <li>Офлайн-розпізнавання команд</li>
+                        </ul>
+                    </div>
+                    <div class="about-visual">
+                        <div class="ai-core">
+                            <div class="core-pulse"></div>
+                            <div class="core-ring"></div>
+                            <div class="core-ring core-ring--2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="how" class="section">
+            <div class="container">
+                <h2 class="section-title">Як <span class="neon-text">працює</span></h2>
+                <div class="schema">
+                    <div class="schema-step">
+                        <div class="step-icon">1</div>
+                        <p>Говоріть у телефон</p>
+                    </div>
+                    <div class="schema-arrow"></div>
+                    <div class="schema-step">
+                        <div class="step-icon">2</div>
+                        <p>Команда шифрується та передається</p>
+                    </div>
+                    <div class="schema-arrow"></div>
+                    <div class="schema-step">
+                        <div class="step-icon">3</div>
+                        <p>Джарвіс виконує на ПК</p>
+                    </div>
+                </div>
+                <div class="video-placeholder">
+                    <div class="play-btn"></div>
+                    <p>Дивіться відео демонстрацію</p>
+                </div>
+            </div>
+        </section>
+        <section id="commands" class="section">
+            <div class="container">
+                <h2 class="section-title">Голосові <span class="neon-text">команди</span></h2>
+                <div class="commands-grid">
+                    <div class="command-card">
+                        <div class="cmd-icon">🌐</div>
+                        <p class="cmd-text">&laquo;Запусти браузер&raquo;</p>
+                        <p class="cmd-result">→ Відкриває Chrome/Edge</p>
+                    </div>
+                    <div class="command-card">
+                        <div class="cmd-icon">▶️</div>
+                        <p class="cmd-text">&laquo;Відкрий відео про ШІ&raquo;</p>
+                        <p class="cmd-result">→ Запуск YouTube + пошук</p>
+                    </div>
+                    <div class="command-card">
+                        <div class="cmd-icon">📧</div>
+                        <p class="cmd-text">&laquo;Перевір пошту&raquo;</p>
+                        <p class="cmd-result">→ Відкриває Gmail/Outlook</p>
+                    </div>
+                    <div class="command-card">
+                        <div class="cmd-icon">🎵</div>
+                        <p class="cmd-text">&laquo;Увімкни музику&raquo;</p>
+                        <p class="cmd-result">→ Запуск Spotify</p>
+                    </div>
+                    <div class="command-card">
+                        <div class="cmd-icon">📁</div>
+                        <p class="cmd-text">&laquo;Відкрий документи&raquo;</p>
+                        <p class="cmd-result">→ Папка на робочому столі</p>
+                    </div>
+                    <div class="command-card">
+                        <div class="cmd-icon">🔒</div>
+                        <p class="cmd-text">&laquo;Заблокуй комп’ютер&raquo;</p>
+                        <p class="cmd-result">→ Win+L / Cmd+L</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="security" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="neon-text">Безпека</span> даних</h2>
+                <div class="security-content">
+                    <div class="security-item">
+                        <div class="shield-icon"></div>
+                        <h3>Кінцеве шифрування</h3>
+                        <p>AES-256 + TLS 1.3 на всіх етапах передачі</p>
+                    </div>
+                    <div class="security-item">
+                        <div class="lock-icon"></div>
+                        <h3>Локальна обробка</h3>
+                        <p>Голос розпізнається на пристрої, не відправляється в хмару</p>
+                    </div>
+                    <div class="security-item">
+                        <div class="key-icon"></div>
+                        <h3>Біометрична авторизація</h3>
+                        <p>Face ID / Відбиток пальця для активації</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="connect" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="neon-text">Підключення</span></h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Встановіть додаток</h3>
+                            <p>Завантажте JARVIS з App Store / Google Play</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Запустіть агент на ПК</h3>
+                            <p>jarvis-agent.exe (Windows) / .dmg (macOS)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Скануйте QR-код</h3>
+                            <p>Автоматичне парування за 3 секунди</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Говоріть — і керуйте</h3>
+                            <p>Система готова до роботи</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="help" class="Helpers">
+                    <h2 class="section-title"><span class="neon-text">Підтримка</span></h2>
+                    <div class="lists-helpers">
+                        <h3>Підтримка в електронному виді: </h3>
+                        <p class="cta-btn-help">Наш емейл: <a href="#" class="link-help"> @HelperUserName</a> </p>
+                        <h3>Підтримка в телефонному виді: </h3>
+                        <p class="cta-btn-help">Наш номер телефону: <a href="#" class="link-help"> +380 00 000 00 00</a> </p>
+                        <h3>Підтримка в соціальних мережах: </h3>
+                        <p class="cta-btn-help">Наш телеграм: <a href="#" class="link-help"> @HelperUserName</a></p>
+                        <p class="cta-btn-help">Наш інстаграм: <a href="#" class="link-help"> @HelperUserName</a></p>
+                        <p class="cta-btn-help">Наш фейсбук: <a href="#" class="link-help"> /HelperUserName</a></p>
+                        <p class="cta-btn-help">Наш твіттер: <a href="#" class="link-help"> @HelperUserName</a></p>
+                        <p class="cta-btn-help">Наш дискорд: <a href="#" class="link-help"> HelperUserName#0000</a></p>
+                        <p class="cta-btn-help">Наш реддіт: <a href="#" class="link-help"> /u/HelperUserName</a></p>
+                    </div>
+                </div>
+                <div class="QR-код">
+                    <img src="qr-code-placeholder.png" alt="QR-код для завантаження JARVIS">
+                </div>
+                <a href="#" class="cta-btn neon-btn large">Завантажити JARVIS</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 JARVIS AI. Усе керування — у вашому голосі.</p>
+            <p>Розроблено з ❤️ для майбутнього.</p>
+            <p class="AD">Реклама</p>
+            <p>Найнижчі комісії тільки тут - <a href="#" class="link-site">"VX-Stocks"</a></p>
+            <p>Найкраща программа про JARVIS тільки у <a href="#" class="link-user">Archion16</a></p>
+            <p><a href="#" class="Political-confidentiality">Політика конфіденційності</a> | <a href="#" class="Rule-confidentiality">Умови використання</a></p>
+        </div>
+    </footer>
+</body>
+</html>

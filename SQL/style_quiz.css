@@ -1,0 +1,9 @@
+body {
+  color: #000000
+}
+
+.input-container{
+  position: relative;
+  margin: 50px auto;
+  width: 100px;
+}
